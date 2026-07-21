@@ -9,7 +9,7 @@ public class SortByFrequency {
             if(map.containsKey(arr[i])){
                 map.put(arr[i], map.get(arr[i])+1);
             }else{
-                map.put(arr[i],1);
+                map.put(arr[i],1 );
             }
         }
         Integer[] nums=new Integer[arr.length];
@@ -22,6 +22,7 @@ public class SortByFrequency {
             }
             return a-b;
         });
+        
         for(int x:nums){
             System.out.print(x+" ");
         }
