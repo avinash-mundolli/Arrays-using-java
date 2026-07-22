@@ -1,0 +1,19 @@
+public class EquilibriumIndex {
+    public static void main(String[] args) {
+        int[] arr = {1, 3, 5, 2, 2};
+        int totalSum=0;
+        int leftSum=0;
+        for(int x:arr){
+            totalSum+=x;
+        }
+        for(int i=0;i<arr.length;i++){
+            totalSum-=arr[i];
+            if(totalSum==leftSum){
+                System.out.println(i);
+                return;
+            }
+            leftSum+=arr[i];
+        }
+        System.out.println("not found");
+    }
+}
